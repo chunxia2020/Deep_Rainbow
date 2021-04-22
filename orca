@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OSX
+    exec /home/ubuntu/anaconda3/envs/pmp/lib/orca.app/Contents/MacOS/orca "$@"
+else
+    # Assume linux
+    exec /home/ubuntu/anaconda3/envs/pmp/lib/orca_app/orca "$@"
+fi
